@@ -1,0 +1,42 @@
+sample of a valid output
+
+=========================================================================================
+first-person
+
+metrics for answer number 1
+[[{"label":"depression","score":0.371366024017334},{"label":"bipolar","score":0.17668558657169342},{"label":"BPD","score":0.17632006108760834},{"label":"Anxiety","score":0.14200253784656525},{"label":"mentalhealth","score":0.06502397358417511},{"label":"schizophrenia","score":0.0547524131834507},{"label":"autism","score":0.013849372044205666}]]
+
+metrics for answer number 2
+[[{"label":"BPD","score":0.4713183045387268},{"label":"depression","score":0.29267603158950806},{"label":"mentalhealth","score":0.08701561391353607},{"label":"bipolar","score":0.05633779987692833},{"label":"Anxiety","score":0.04502566531300545},{"label":"schizophrenia","score":0.032873865216970444},{"label":"autism","score":0.014752735383808613}]]
+
+metrics for answer number 3
+[[{"label":"depression","score":0.4983212947845459},{"label":"Anxiety","score":0.15051601827144623},{"label":"bipolar","score":0.09211289137601852},{"label":"BPD","score":0.08522473275661469},{"label":"mentalhealth","score":0.08096183091402054},{"label":"schizophrenia","score":0.04927599057555199},{"label":"autism","score":0.043587274849414825}]]
+
+metrics for answer number 4
+[[{"label":"depression","score":0.3253627121448517},{"label":"bipolar","score":0.25140613317489624},{"label":"BPD","score":0.15408554673194885},{"label":"Anxiety","score":0.15259690582752228},{"label":"schizophrenia","score":0.05204223468899727},{"label":"autism","score":0.0387192964553833},{"label":"mentalhealth","score":0.02578720822930336}]]
+
+metrics for answer number 5
+[[{"label":"Anxiety","score":0.43746963143348694},{"label":"depression","score":0.2714393734931946},{"label":"BPD","score":0.08656606078147888},{"label":"mentalhealth","score":0.06957882642745972},{"label":"autism","score":0.059783514589071274},{"label":"schizophrenia","score":0.0389232337474823},{"label":"bipolar","score":0.036239415407180786}]]
+
+metrics for answer number 6
+[[{"label":"depression","score":0.40412992238998413},{"label":"bipolar","score":0.2008456438779831},{"label":"BPD","score":0.13415706157684326},{"label":"mentalhealth","score":0.12794813513755798},{"label":"Anxiety","score":0.09246084839105606},{"label":"schizophrenia","score":0.03369569405913353},{"label":"autism","score":0.006762765813618898}]]
+
+metrics for answer number 7
+[[{"label":"Anxiety","score":0.4401065707206726},{"label":"depression","score":0.26127374172210693},{"label":"mentalhealth","score":0.10263265669345856},{"label":"BPD","score":0.06117861345410347},{"label":"bipolar","score":0.05808153375983238},{"label":"schizophrenia","score":0.0399591438472271},{"label":"autism","score":0.03676773980259895}]]
+
+metrics for answer number 8
+[[{"label":"mentalhealth","score":0.44926348328590393},{"label":"Anxiety","score":0.33596640825271606},{"label":"depression","score":0.10387060791254044},{"label":"autism","score":0.05159900709986687},{"label":"schizophrenia","score":0.024279849603772163},{"label":"BPD","score":0.01824243739247322},{"label":"bipolar","score":0.01677815243601799}]]
+
+metrics for answer number 9
+[[{"label":"depression","score":0.8284720182418823},{"label":"Anxiety","score":0.08418680727481842},{"label":"BPD","score":0.05198332667350769},{"label":"mentalhealth","score":0.019925042986869812},{"label":"bipolar","score":0.009491813369095325},{"label":"schizophrenia","score":0.004266363102942705},{"label":"autism","score":0.0016745778266340494}]]
+
+metrics for answer number 10
+[[{"label":"depression","score":0.31363585591316223},{"label":"Anxiety","score":0.2500302195549011},{"label":"BPD","score":0.22053849697113037},{"label":"mentalhealth","score":0.1127166897058487},{"label":"autism","score":0.053588610142469406},{"label":"bipolar","score":0.03486451506614685},{"label":"schizophrenia","score":0.014625560492277145}]]
+
+metrics for answer number 11
+[[{"label":"mentalhealth","score":0.3360190689563751},{"label":"BPD","score":0.3087870478630066},{"label":"depression","score":0.1439654529094696},{"label":"Anxiety","score":0.12698383629322052},{"label":"bipolar","score":0.05533561855554581},{"label":"schizophrenia","score":0.018074538558721542},{"label":"autism","score":0.010834391228854656}]]
+
+metrics for answer number 12
+[[{"label":"mentalhealth","score":0.5326235294342041},{"label":"depression","score":0.31401485204696655},{"label":"autism","score":0.054468344897031784},{"label":"Anxiety","score":0.045462124049663544},{"label":"BPD","score":0.03195595368742943},{"label":"bipolar","score":0.016774363815784454},{"label":"schizophrenia","score":0.004700809251517057}]]
+
+=========================================================================================
