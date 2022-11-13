@@ -4,7 +4,7 @@ from pymed import PubMed
 
 def get_articles_from_pubmed_database(mental_illness):
     # Create a PubMed object that GraphQL can use to query
-    pubmed = PubMed(tool="sentiment-analysissss", email="strangerrrr@mail.com")
+    pubmed = PubMed(tool="sentiment-analysisssss", email="strangerrrrr@mail.com")
 
     # Create a GraphQL query
     query = mental_illness + "[Title]"
