@@ -1,16 +1,17 @@
 # PyMed is a Python library that provides access to PubMed.
+from time import sleep
 from pymed import PubMed
 
 
 def get_articles_from_pubmed_database(mental_illness):
     # Create a PubMed object that GraphQL can use to query
-    pubmed = PubMed(tool="sentiment-analysisssss", email="strangerrrrr@mail.com")
+    pubmed = PubMed(tool="sentiment-analysissssss", email="strangerrrrrr@mail.com")
 
     # Create a GraphQL query
     query = mental_illness + "[Title]"
 
     # Execute the query against the PubMed API
-    results = pubmed.query(query, max_results=5)
+    results = pubmed.query(query, max_results=5000)
     articles = []
     for article in results:
         print(article.toJSON())
@@ -37,3 +38,10 @@ def get_dataset():
     schizophrenia_results = get_articles_from_pubmed_database("schizophrenia")
     data = general_results + anxiety_results + depression_results + suicide_results + insomnia_results + stress_results + phobias_results + schizophrenia_results
     return list(filter(filtering_invalid_content, list(map(get_article_content, data))))
+
+
+dataset = get_dataset()
+
+with open('output.txt', 'w') as f:
+    for line in dataset:
+        f.write(f"{line}\n")

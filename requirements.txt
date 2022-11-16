@@ -1,7 +1,10 @@
 requests == 2.28.1
-pathlib
+pathlib~=1.0.1
 PyPDF2 == 2.11.1
 matplotlib == 3.5.2
 natsort == 8.2.0
 transformers == 4.24.0
 urllib3 == 1.26.9
+pymed~=0.8.7
+tensorflow~=2.10.0
+numpy~=1.23.2
