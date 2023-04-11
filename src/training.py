@@ -1,3 +1,4 @@
+import random
 import numpy as np
 import csv
 import tensorflow as tf
@@ -12,7 +13,7 @@ def normalize_data(interview):
     return text[0:256]
 
 
-vocab_size = 27000
+vocab_size = 3000
 embedding_dim = 16
 max_length = 120
 training_size = 22000
@@ -21,20 +22,34 @@ oov_tok = "<OOV>"
 
 data_source = get_datasource()
 
-with open('../mental-health-from-social-media-sites.csv', newline='') as f:
+test_data_store = []
+train_data_store = []
+
+with open('./train.csv', newline='', encoding='utf-8', errors='replace') as f:
     reader = csv.reader(f)
-    datastore = list(reader)
+    train_data_store = list(reader)
 
-sentences = []
-labels = []
-for item in datastore:
-    sentences.append(item[0])
-    labels.append(int(item[1]))
+with open('./test.csv', newline='', encoding='utf-8', errors='replace') as f:
+    reader = csv.reader(f)
+    test_data_store = list(reader)
 
-training_sentences = sentences[0:training_size]
-testing_sentences = sentences[training_size:]
-training_labels = labels[0:training_size]
-testing_labels = labels[training_size:]
+training_sentences = []
+training_labels = []
+for item in train_data_store:
+    training_sentences.append(item[1])
+    training_labels.append(int(item[2]))
+
+testing_sentences = []
+testing_labels = []
+for item in test_data_store:
+    testing_sentences.append(item[1])
+    testing_labels.append(int(item[2]))
+
+print(len(training_sentences))
+print(len(testing_sentences))
+print(len(training_labels))
+print(len(testing_labels))
+
 
 tokenizer = Tokenizer(num_words=vocab_size, oov_token=oov_tok)
 tokenizer.fit_on_texts(training_sentences)
@@ -67,6 +82,7 @@ history = model.fit(training_padded, training_labels, epochs=num_epochs,
 data = list(map(normalize_data, (list(data_source.values()))))
 sentences = tokenizer.texts_to_sequences(data)
 padded = pad_sequences(sentences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
+print("Shape of input data:", padded.shape)
 lst = model.predict(padded)
 
 p1 = float("{0:.2f}".format(float(lst[0])))
@@ -84,9 +100,9 @@ x = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9']
 data = [p1, p2, p3, p4, p5, p6, p7, p8, p9]
 x_pos = [i for i, _ in enumerate(x)]
 plt.bar(x_pos, data, color='blue')
-plt.xlabel("Mental Health")
+plt.xlabel("sentiment analysis")
 plt.ylabel("Estimate")
 plt.title("Results")
 plt.xticks(x_pos, x)
-plt.gca().set_ylim([0.00, 1.20])
+plt.gca().set_ylim([0.0, 1.0])
 plt.show()

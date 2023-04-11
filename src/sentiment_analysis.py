@@ -5,12 +5,12 @@ from matplotlib import pyplot as plt
 from natsort import natsorted
 from requests.adapters import HTTPAdapter
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+import tensorflow as tf
 from urllib3.util.retry import Retry
 from constants import auth_key, token_size
 
-
 def load_data_sources():
-    directory = '../interviews'
+    directory = './interviews'
     files = Path(directory).glob('*')
     files = natsorted(files, key=str)
     return files
@@ -19,7 +19,7 @@ def load_data_sources():
 def normalize_data(files):
     data_dic = {}
     for interview in files:
-        reader = PdfReader("../interviews/" + interview.name)
+        reader = PdfReader("./interviews/" + interview.name)
         text = ""
         for page in reader.pages:
             text += page.extract_text() + "\n"
