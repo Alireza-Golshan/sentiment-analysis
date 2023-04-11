@@ -1,4 +1,3 @@
-import random
 import numpy as np
 import csv
 import tensorflow as tf
@@ -28,6 +27,7 @@ train_data_store = []
 with open('./train.csv', newline='', encoding='utf-8', errors='replace') as f:
     reader = csv.reader(f)
     train_data_store = list(reader)
+
 
 with open('./test.csv', newline='', encoding='utf-8', errors='replace') as f:
     reader = csv.reader(f)
@@ -75,7 +75,7 @@ training_padded = np.array(training_padded)
 training_labels = np.array(training_labels)
 testing_padded = np.array(testing_padded)
 testing_labels = np.array(testing_labels)
-num_epochs = 5
+num_epochs = 10
 
 history = model.fit(training_padded, training_labels, epochs=num_epochs,
                     validation_data=(testing_padded, testing_labels), verbose=1)
